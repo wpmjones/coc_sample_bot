@@ -11,6 +11,6 @@ bot_token = "token_from_discord"
 ```
 
 ## Project Developers
-TubaKid, Conq, mathsman...
+TubaKid, Sidekick, mathsman...
 
 Find us and ask questions at https://discord.gg/Eaja7gJ

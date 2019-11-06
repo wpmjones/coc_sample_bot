@@ -1,5 +1,5 @@
-# Clash of Clans Sample Bot [Python]
-Sample bot, using python, to access the Clash of Clans API
+# Clash of Clans Sample Discord Bot [Python]
+Sample Discord bot, using python, to access the Clash of Clans API
 
 ## creds.py
 This is where you want to store your sensitive information. It should look something like this.

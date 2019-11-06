@@ -1,2 +1,2 @@
 discord.py
-coc.py>=0.2.1
+git+https://github.com/mathsman5133/coc.py

@@ -11,7 +11,7 @@ description = "This is where you provide a concise description of your bot. Not 
 prefix = "!"
 
 # Here you make the connection to the COC API using the coc.py library
-coc_client = coc.login(creds.email, creds.password)
+coc_client = coc.login(creds.coc_dev_email, creds.coc_dev_password)
 
 # These are the cogs that you are using in your bot
 initial_extensions = (
@@ -40,6 +40,6 @@ class MyBot(commands.Bot):
 if __name__ == "__main__":
     try:
         bot = MyBot()
-        bot.run(creds.bot_token)
+        bot.run(creds.discord_bot_token)
     except:
         traceback.print_exc()

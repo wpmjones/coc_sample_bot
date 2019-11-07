@@ -11,7 +11,7 @@ Sample Discord bot, using Python, to access the Clash of Clans API
 
 ## Test Your Bot
 1. Add your bot to a test Discord Server using an URL like this:
-`https://discordapp.com/oauth2/authorize?client_id=`Insert Client ID from your Discord App`&scope=bot>`
+`https://discordapp.com/oauth2/authorize?client_id=`Insert Client ID from your Discord App`&scope=bot`
 1. Send the command `!clan #CLASH_CLAN_TAG` to load info about the clan. 
 
 ## Project Developers

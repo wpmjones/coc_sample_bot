@@ -21,12 +21,15 @@ initial_extensions = (
 
 
 class MyBot(commands.Bot):
+    # The __init__ method is a standard method seen at the beginning of most classes
+    # it declares the variables that will be used throughout the class
     def __init__(self):
         super().__init__(command_prefix=prefix,
                          description=description,
                          case_insensitive=True)
         self.coc = coc_client
 
+        # Load all extensions (see the cogs folder)
         for extension in initial_extensions:
             try:
                 self.load_extension(extension)
@@ -37,6 +40,8 @@ class MyBot(commands.Bot):
         print(f"Bot is logged in as {self.user} ID: {self.user.id}")
 
 
+# the following if statement ensures that bot.py is the actual file being executed
+# the alternative is that this file might be imported into another file (in which case, we don't run the following)
 if __name__ == "__main__":
     try:
         bot = MyBot()

@@ -28,6 +28,6 @@ source venv_test/bin/activate
 You should now see your environment tag in the command line indicating that you are now in the virtual environment.
 ![venv](images/venv_image.png)
 ## Project Developers
-TubaKid, Sidekick, mathsman...
+TubaKid, Sidekick, mathsman, majordoobie...
 
 Find us and ask questions at https://discord.gg/Eaja7gJ

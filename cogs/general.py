@@ -10,6 +10,7 @@ class General(commands.Cog):
 
     @commands.command(name="get_clan", aliases=["getclan", "clan"])
     async def get_clan(self, ctx, clan_tag):
+        """Gets clan information from API and displays it for user"""
         # This line uses a utility in the coc.py library to correct clan tags (case, missing #, etc.)
         clan_tag = coc.utils.correct_tag(clan_tag)
 

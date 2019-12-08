@@ -11,12 +11,14 @@ description = "This is where you provide a concise description of your bot. Not 
 prefix = "!"
 
 # Here you make the connection to the COC API using the coc.py library
-coc_client = coc.login(creds.coc_dev_email, creds.coc_dev_password)
+
+coc_client = coc.login(creds.coc_dev_email, creds.coc_dev_password, client=coc.EventsClient)
 
 # These are the cogs that you are using in your bot
 initial_extensions = (
     "cogs.general",
-    "cogs.special"
+    "cogs.special",
+    "cogs.war-reporter"
 )
 
 

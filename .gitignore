@@ -3,3 +3,6 @@
 creds.py
 
 .idea
+venv_bot/
+.vscode/
+__pycache*

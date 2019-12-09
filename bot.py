@@ -2,6 +2,7 @@
 import coc
 import traceback
 import creds
+from database.database import Bot_Database
 
 from discord.ext import commands
 
@@ -18,9 +19,12 @@ coc_client = coc.login(creds.coc_dev_email, creds.coc_dev_password, client=coc.E
 initial_extensions = (
     "cogs.general",
     "cogs.special",
-    "cogs.war-reporter"
+    "cogs.database_bg",
+    "cogs.war-reporter",
 )
 
+# File path to your sqlite3 db file
+SQLITE_FILE = 'database/bot_database.db'
 
 class MyBot(commands.Bot):
     # The __init__ method is a standard method seen at the beginning of most classes
@@ -30,6 +34,8 @@ class MyBot(commands.Bot):
                          description=description,
                          case_insensitive=True)
         self.coc = coc_client
+        # This instanciates the database class
+        self.dbconn = Bot_Database(SQLITE_FILE)
 
         # Load all extensions (see the cogs folder)
         for extension in initial_extensions:
@@ -37,6 +43,7 @@ class MyBot(commands.Bot):
                 self.load_extension(extension)
             except Exception as extension:
                 traceback.print_exc()
+        
 
     async def on_ready(self):
         print(f"Bot is logged in as {self.user} ID: {self.user.id}")

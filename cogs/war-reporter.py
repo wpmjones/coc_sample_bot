@@ -21,7 +21,7 @@ class WarReporter(commands.Cog):
     def cog_unload(self):
         self.bot.coc.remove_events(
             self.on_war_attack,
-            self.on_war_attack
+            self.on_war_state_change
         )
         self.bot.coc.stop_updates("war")
 
